@@ -177,7 +177,7 @@ class AsynchronousValueIterationAgent(ValueIterationAgent):
                     values[s] = 0
                 else:
                     values[s] = maxVal
-                self.values = values
+                self.values[s] = values[s]
 
 
 class PrioritizedSweepingValueIterationAgent(AsynchronousValueIterationAgent):
