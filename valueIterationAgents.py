@@ -166,17 +166,18 @@ class AsynchronousValueIterationAgent(ValueIterationAgent):
             index += 1
             if index == len(self.mdp.getStates()):
                 index = 0
-            actions = self.mdp.getPossibleActions(s)
-            maxVal = -float('inf')
-            for a in actions:
-                val = self.computeQValueFromValues(s, a)
-                if val > maxVal:
-                    maxVal = val
-            if maxVal == -float('inf'):
-                values[s] = 0
-            else:
-                values[s] = maxVal
-            self.values = values
+            if not(self.mdp.isTerminal(s)):
+                actions = self.mdp.getPossibleActions(s)
+                maxVal = -float('inf')
+                for a in actions:
+                    val = self.computeQValueFromValues(s, a)
+                    if val > maxVal:
+                        maxVal = val
+                if maxVal == -float('inf'):
+                    values[s] = 0
+                else:
+                    values[s] = maxVal
+                self.values = values
 
 
 class PrioritizedSweepingValueIterationAgent(AsynchronousValueIterationAgent):
