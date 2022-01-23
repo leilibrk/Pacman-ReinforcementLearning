@@ -109,17 +109,14 @@ class ValueIterationAgent(ValueEstimationAgent):
         """
         "*** YOUR CODE HERE ***"
         actions = self.mdp.getPossibleActions(state)
-        maxAc = 0
+        maxAc = None
         maxQ = -float('inf')
         for a in actions:
             q_value = self.computeQValueFromValues(state, a)
             if q_value > maxQ:
                 maxQ = q_value
                 maxAc = a
-        if maxAc == -float('inf'):
-            return None
-        else:
-            return maxAc
+        return maxAc
 
     def getPolicy(self, state):
         return self.computeActionFromValues(state)
