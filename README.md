@@ -28,20 +28,13 @@ The project explores various AI algorithms to tackle different aspects of Pac-Ma
 ### Third Phase: 
 - **Model-Free Reinforcement Learning:** Implemented the Q-learning algorithm, a model-free reinforcement learning approach, to optimize Pac-Man's actions.
 
-## Performance Metrics
+## Pacman Multi-Agent results
 
-- **Average Score:** 
-  - Minimax: -92
-  - Minimax with Alpha-Beta Pruning: -80
-  - Expectimax: 206.8
-- **Win Rate:** 
-  - Minimax: 40%
-  - Minimax with Alpha-Beta Pruning: 40%
-  - Expectimax: 70%
-- **Runtime:** 
-  - Minimax: 42.23 seconds
-  - Minimax with Alpha-Beta Pruning: 33.5 seconds
-  - Expectimax: 46.27 seconds
+| Method                             | Average Score | Win Rate | Runtime     |
+|------------------------------------|---------------|----------|-------------|
+| Minimax                            | -92           | 40%      | 42.23 sec   |
+| Minimax with alpha-beta pruning    | -80           | 40%      | 33.5 sec    |
+| Expectimax                         | 206.8         | 70%      | 46.27 sec   |
 
 ## Reinforcement Learning Model Results: 
 <img src="https://github.com/leilibrk/Pacman-AI-Project/blob/master/pacman-RL.png" title="" alt="zip2.png" width="300">
